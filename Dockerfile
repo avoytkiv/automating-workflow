@@ -18,7 +18,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY data.xlsx /var/lib/my-data
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
-#RUN mkdir -p ./data
+RUN mkdir -p ./data
 
 # Bundle app source
 COPY . .
