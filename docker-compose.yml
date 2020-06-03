@@ -6,6 +6,6 @@ services:
     build: '.'
     container_name: libertex_show
     volumes:
-      - app-data:/var/lib/my-data
+      - app-data:/var/lib/trade
 #    environment:
 #      - DATA_PATH=/var/lib/my-data
