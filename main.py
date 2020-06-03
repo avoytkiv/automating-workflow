@@ -12,12 +12,12 @@ from json import dumps
 logging.basicConfig(format='%(asctime)-15s [%(levelname)s]: %(message)s', level=logging.INFO)
 logger = logging.getLogger('main')
 
-data_dir = os.environ.get('DATA_PATH', '.')
-fpath = os.path.join(data_dir, 'data.xlsx')
-# path = os.path.join(sys.path[0], 'data.xlsx')
+data_dir = os.getcwd()
+# fpath = os.path.join(data_dir, 'data.xlsx')
+fpath = os.path.join(sys.path[0], 'data.xlsx')
 
 
-last_time = os.path.getmtime(data_dir) # last update time
+last_time = os.path.getmtime(fpath) # last update time
 
 
 def hangout_send_message(url, text):
@@ -84,4 +84,3 @@ if __name__ == 'main':
     except:
         traceback.print_exc()
         time.sleep(3)
-        

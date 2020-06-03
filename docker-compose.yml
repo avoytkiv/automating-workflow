@@ -1,11 +1,11 @@
 version: '3'
 volumes:
-  app-data:
+  excel-data:
 services:
   app:
     build: '.'
     container_name: libertex_show
     volumes:
-      - app-data:/var/lib/show
-    environment:
-      - DATA_PATH=/var/lib/show
+      - excel-data:/var/lib/my-data
+#    environment:
+#      - DATA_PATH=/var/lib/my-data
