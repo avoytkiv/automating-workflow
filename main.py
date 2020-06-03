@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     try:
         while True:
-            logger.info('Wait for while to be updated')
+            logger.info('Wait for file to be updated. Last update: {}'.format(last_time))
             if os.path.getmtime(fpath) != last_time:
                 last_time = os.path.getmtime(fpath)
                 print('File was updated. Lets execute script\n')
