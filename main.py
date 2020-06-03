@@ -53,7 +53,7 @@ def read_excel_file(path):
     return data
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     logger.info('data dir = {}'.format(fpath))
 
     try:
