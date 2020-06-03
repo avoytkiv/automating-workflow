@@ -13,6 +13,7 @@ logging.basicConfig(format='%(asctime)-15s [%(levelname)s]: %(message)s', level=
 logger = logging.getLogger('main')
 
 data_dir = os.environ.get('DATA_PATH', '.')
+fpath = os.path.join(data_dir, 'data.xlsx')
 # path = os.path.join(sys.path[0], 'data.xlsx')
 
 
@@ -55,12 +56,12 @@ if __name__ == 'main':
 
     try:
         while True:
-            if os.path.getmtime(data_dir) != last_time:
-                last_time = os.path.getmtime(data_dir)
+            if os.path.getmtime(fpath) != last_time:
+                last_time = os.path.getmtime(fpath)
                 print('File was updated. Lets execute script\n')
 
                 # Read excel file and return dictionary
-                data = read_excel_file(path=data_dir)
+                data = read_excel_file(path=fpath)
 
                 # Create message
                 greetings = 'Доброе утро, коллеги! \n\n' \
@@ -83,4 +84,4 @@ if __name__ == 'main':
     except:
         traceback.print_exc()
         time.sleep(3)
-        pass
+        
