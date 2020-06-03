@@ -13,14 +13,13 @@ logging.basicConfig(format='%(asctime)-15s [%(levelname)s]: %(message)s', level=
 logger = logging.getLogger('main')
 
 logger.info('start of script')
-data_dir = os.getcwd()
+# data_dir = os.getcwd()
 # fpath = os.path.join(data_dir, 'data.xlsx')
-fpath = os.path.join(sys.path[0], 'data.xlsx')
+fpath = '/data/data.xlsx'
 
 
 last_time = os.path.getmtime(fpath) # last update time
 
-logger.info('data dir path {}'.format(data_dir))
 logger.info('file path {}'.format(fpath))
 
 def hangout_send_message(url, text):
@@ -55,7 +54,7 @@ def read_excel_file(path):
 
 
 if __name__ == 'main':
-    logger.info('data dir = {}'.format(data_dir))
+    logger.info('data dir = {}'.format(fpath))
 
     try:
         while True:

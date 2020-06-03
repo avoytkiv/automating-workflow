@@ -1,5 +1,9 @@
 version: '3'
+volumes:
+  app-data:
 services:
   app:
     build: '.'
     container_name: libertex_show
+    volumes:
+      - ./data.xlsx:/data/data.xlsx
