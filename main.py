@@ -13,14 +13,11 @@ logging.basicConfig(format='%(asctime)-15s [%(levelname)s]: %(message)s', level=
 logger = logging.getLogger('main')
 
 logger.info('start of script')
-# data_dir = os.getcwd()
-# fpath = os.path.join(data_dir, 'data.xlsx')
 fpath = '/data/data.xlsx'
 
 
 last_time = os.path.getmtime(fpath) # last update time
 
-logger.info('file path {}'.format(fpath))
 
 def hangout_send_message(url, text):
     bot_message = {
@@ -40,7 +37,7 @@ def hangout_send_message(url, text):
 
 
 def read_excel_file(path):
-    df = pd.read_excel(path, dtype={'Entry': str, 'Stop': str, 'Target': str, 'Lot': str})
+    df = pd.read_excel(path, dtype={'Entry': str, 'Stop': str, 'Target': str})
     data = dict()
     data['name'] = df['Name'][0]
     data['type'] = df['Type'][0]
@@ -87,4 +84,4 @@ if __name__ == '__main__':
 
     except:
         traceback.print_exc()
-        time.sleep(3)
+        time.sleep(60)
