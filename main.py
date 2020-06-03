@@ -83,7 +83,7 @@ if __name__ == 'main':
                 #
                 # for url in urls:
                 #     hangout_send_message(url=url, text=greetings)
-                time.sleep(5)
+            time.sleep(5)
 
     except:
         traceback.print_exc()
