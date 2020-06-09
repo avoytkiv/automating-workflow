@@ -73,14 +73,15 @@ if __name__ == '__main__':
 
                 # Send messages to google chats
 
-                hangout_send_message('https://chat.googleapis.com/v1/spaces/AAAAPSJiFkU/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=VHttKk09UGbghrm99U0NJAAkeYfsmKYGWlX7V0wQuFY%3D', greetings)
-                # urls = ['https://chat.googleapis.com/v1/spaces/AAAApIkp_5s/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=4fr0hWu-wH1ezCG8l83OjQEWg18pn_gGUKc1hBsEdIM%3D',
-                #         'https://chat.googleapis.com/v1/spaces/AAAAIzUh4TQ/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=7Xy5SGWXEEGYtj7kS5GXyj4LGrp2ETFOdBWNM_UtIVI%3D',
-                #         'https://chat.googleapis.com/v1/spaces/AAAA4CAHCY4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=KXpBS2xPHRwsmgqW4WYZjxR9QOoOIkpCxE7V0tSaF1g%3D']
-                #
-                # for url in urls:
-                #     hangout_send_message(url=url, text=greetings)
-            time.sleep(5)
+                # hangout_send_message('https://chat.googleapis.com/v1/spaces/AAAAPSJiFkU/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=VHttKk09UGbghrm99U0NJAAkeYfsmKYGWlX7V0wQuFY%3D', greetings)
+                urls = ['https://chat.googleapis.com/v1/spaces/AAAApIkp_5s/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=4fr0hWu-wH1ezCG8l83OjQEWg18pn_gGUKc1hBsEdIM%3D',
+                        'https://chat.googleapis.com/v1/spaces/AAAAIzUh4TQ/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=7Xy5SGWXEEGYtj7kS5GXyj4LGrp2ETFOdBWNM_UtIVI%3D',
+                        'https://chat.googleapis.com/v1/spaces/AAAA4CAHCY4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=KXpBS2xPHRwsmgqW4WYZjxR9QOoOIkpCxE7V0tSaF1g%3D']
+
+                for url in urls:
+                    hangout_send_message(url=url, text=greetings)
+
+            time.sleep(60)
 
     except:
         traceback.print_exc()
