@@ -14,4 +14,4 @@ Overall, this script automates the process of checking an XLSX file for updates 
 
 This Python script is running within a Docker container, which is being used to run the Python script in a standardized environment that can be easily moved from one server to another. Additionally, both the XLSX file and the Docker container are located on the same server, which is where the script is executing. This allows the script to easily access the file and send messages to the Google Hangout chats without needing to go through any external network connections.
 
-<img width="762" alt="Screenshot 2023-02-22 at 16 03 53" src="https://user-images.githubusercontent.com/74664634/220784048-738d7f20-9bc6-4d60-b1ce-189ce5051367.png">
+<img width="930" alt="Screenshot 2023-02-22 at 16 18 53" src="https://user-images.githubusercontent.com/74664634/220785491-a10a6014-aad1-492b-90fd-6ef853b0fb6c.png">
