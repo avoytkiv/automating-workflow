@@ -12,4 +12,6 @@ The urls list contains the URLs for the Google Hangout chats to which the messag
 
 Overall, this script automates the process of checking an XLSX file for updates and sending messages to different Google Hangout chats, making the process more efficient and automated.
 
+This Python script is running within a Docker container, which is being used to run the Python script in a standardized environment that can be easily moved from one server to another. Additionally, both the XLSX file and the Docker container are located on the same server, which is where the script is executing. This allows the script to easily access the file and send messages to the Google Hangout chats without needing to go through any external network connections.
+
 <img width="762" alt="Screenshot 2023-02-22 at 16 03 53" src="https://user-images.githubusercontent.com/74664634/220784048-738d7f20-9bc6-4d60-b1ce-189ce5051367.png">
